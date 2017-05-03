@@ -13,34 +13,41 @@
   		</plugin>
   	</plugins>
   </build>
-  <dependencyManagement>
-  	<dependencies>
-  		<dependency>
-  			<groupId>com.amazonaws</groupId>
-  			<artifactId>aws-java-sdk-bom</artifactId>
-  			<version>1.11.22</version>
-  			<type>pom</type>
-  			<scope>import</scope>
-  		</dependency>
-  	</dependencies>
-  </dependencyManagement>
   <dependencies>
   	<dependency>
   		<groupId>com.amazonaws</groupId>
   		<artifactId>aws-lambda-java-core</artifactId>
-  		<version>1.1.0</version>
+  		<version>LATEST</version>
   	</dependency>
   	<dependency>
   		<groupId>com.amazonaws</groupId>
   		<artifactId>aws-java-sdk-cognitoidentity</artifactId>
+  		<version>LATEST</version>
   	</dependency>
   	<dependency>
   		<groupId>com.amazonaws</groupId>
   		<artifactId>aws-java-sdk-core</artifactId>
+  		<version>LATEST</version>
   	</dependency>
   	<dependency>
   		<groupId>com.amazonaws</groupId>
   		<artifactId>aws-java-sdk-sts</artifactId>
+  		<version>LATEST</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-annotations</artifactId>
+  		<version>LATEST</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-core</artifactId>
+  		<version>LATEST</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-databind</artifactId>
+  		<version>LATEST</version>
   	</dependency>
   </dependencies>
 </project>
