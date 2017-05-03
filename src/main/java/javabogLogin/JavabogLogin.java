@@ -47,7 +47,7 @@ public class JavabogLogin extends ControllerBase{
 				raiseError(out, 400, "Password not entered");
 			}
 			java.net.URL url;
-			url = new java.net.URL("localhost"/*"http://javabogh.dk:9901/brugeradmin?wsdl"*/); //UnkownHostException
+			url = new java.net.URL("http://javabog.dk:9901/brugeradmin?wsdl"); //UnkownHostException
 			QName qname = new QName("http://soap.transport.brugerautorisation/", "BrugeradminImplService");
 			Service service = null;
 			try{
@@ -60,7 +60,7 @@ public class JavabogLogin extends ControllerBase{
 			Brugeradmin ba = service.getPort(Brugeradmin.class);
 			try{
 				Bruger b = ba.hentBruger(login.username, login.password);
-			}catch(IllegalArgumentException e){
+			}catch(Exception e){
 				raiseError(out, 401, "Wrong username or password");
 				return;
 			}
@@ -79,7 +79,7 @@ public class JavabogLogin extends ControllerBase{
 			if(e instanceof UnknownHostException){
 				
 			}
-			raiseError(out, 500, "(╯°□°）╯︵ ┻━┻");		
+			raiseError(out, 500, "(╯°□°）╯︵ ┻━┻"); 		
 			return;
 		}
 	}
